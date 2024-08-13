@@ -1,3 +1,34 @@
 .headerContainer {
-    
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .boxContent {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .boxLogo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            .textLogo, .symbol {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+
+            .symbol {
+               color: #ed4831;
+            }
+
+            .bar {
+                color: #f6a21d;
+            }
+        }
+    }
 }
