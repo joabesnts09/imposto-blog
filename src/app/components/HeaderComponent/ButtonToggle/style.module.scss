@@ -1,0 +1,72 @@
+.toggleContainer {
+    display: inline-block;
+    position: relative;
+
+    .toggleCheckbox {
+        display: none;
+
+        &:checked + .toggleLabel {
+            background-color: #34495e;
+        }
+    
+        &:checked + .toggleLabel .toggleSlider {
+            transform: translate(30px, -50%);
+        }
+    }
+
+    .toggleLabel {
+        width: 60px;
+        height: 30px;
+        background-color: #f39c12;
+        border-radius: 15px;
+        padding: 5px;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: background-color 0.3s;
+
+        img {
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+        }
+
+        .sun {
+            order: 1;
+        }
+
+        .moon {
+            order: 2;
+        }
+
+       
+
+        .toggleSlider {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            transition: transform 0.3s;
+            transform: translateY(-50%);
+        }
+    }
+
+    
+
+    //     &:checked + .toggleLabel::before {
+    //         transform: translateX(30px);
+    //     }
+}
+
+// .toggleContainer:checked + .toggleLabel {
+//     background-color: #34495e;
+// }
+
+// .toggleContainer:checked + .toggleLabel::before {
+//     transform: translateX(30px);
+// }

@@ -1,10 +1,11 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import styles from './page.module.scss'
+import { HeaderComponent } from './components/HeaderComponent'
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      
-    </main>
-  );
+    return (
+        <>
+            <HeaderComponent />
+            <main className={styles.main}></main>
+        </>
+    )
 }
