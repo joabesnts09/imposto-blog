@@ -16,18 +16,15 @@ const play = Play({
 
 export const HeaderComponent = () => {
     const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-        // Verifique o localStorage para a preferência de tema do usuário
-        const savedTheme = localStorage.getItem("theme");
+        const savedTheme = localStorage.getItem("@ThemeJSTech");
         return savedTheme ? savedTheme === "dark" : false;
       });
 
 
       useEffect(() => {
-        // Aplique o tema correspondente ao body
+
         document.body.className = isDarkMode ? "dark-mode" : "light-mode";
-    
-        // Salve a preferência do usuário no localStorage
-        localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+        localStorage.setItem("@ThemeJSTech", isDarkMode ? "dark" : "light");
       }, [isDarkMode]);
     
       const toggleTheme = () => {
