@@ -13,12 +13,16 @@
 
         .boxLogo {
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: baseline;
             gap: 10px;
 
+            img {
+                margin: -10px !important;
+            }
+
             .textLogo, .symbol {
-                font-size: 2rem;
+                font-size: 1.8rem;
                 font-weight: 600;
             }
 
