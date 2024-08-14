@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import style from './style.module.scss'
 import { Gupter } from 'next/font/google'
-import imageBanner from '../../../../public/images/imgFundo1.jpg'
+// import imageBanner from '../../../../public/images/imgFundo1.jpg'
+import imageBanner from '../../../../public/images/impostImage.jpg'
 
 const roboto_mono = Gupter({
     weight: ['400', '700'],

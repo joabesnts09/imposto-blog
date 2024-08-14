@@ -5,22 +5,14 @@ import imgMoon from '../../../../../public/images/moonIcon.svg'
 import imgSun from '../../../../../public/images/sunIcon.svg'
 import Image from 'next/image'
 
+interface IToggleSwitchProps {
+    isDarkMode: boolean;
+    toggleTheme: () => void;
+}
 
 
-export const ButtonToggle = () => {
-    const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
+export const ButtonToggle = ({ isDarkMode, toggleTheme }: IToggleSwitchProps) => {
 
-    useEffect(() => {
-        if (isDarkMode) {
-            document.body.classList.add('dark-mode')
-        } else {
-            document.body.classList.remove('dark-mode')
-        }
-    }, [isDarkMode])
-
-    const handleToggle = () => {
-        setIsDarkMode(!isDarkMode)
-    }
 
     return (
         <>
@@ -30,7 +22,7 @@ export const ButtonToggle = () => {
                     id='theme-toggle'
                     className={style.toggleCheckbox}
                     checked={isDarkMode}
-                    onChange={handleToggle}
+                    onChange={toggleTheme}
                 />
                 <label htmlFor='theme-toggle' className={style.toggleLabel}>
                 <span className={style.toggleSlider}></span>

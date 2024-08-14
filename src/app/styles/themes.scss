@@ -1,0 +1,24 @@
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #000000;
+
+
+    // Dark mode variables
+    --bg-color-dark: #121212;
+    --text-color-dark: #ffffff;
+
+    // Default theme (light mode)
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--ext-color: $text-color-light;);
+}
+
+body.light-mode {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+  
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: #fff;
+}
+
